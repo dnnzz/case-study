@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import SideBar from "./components/UI/Sidebar";
+import Content from "./components/Content";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [data, setData] = useState([]);
+  const [date, setDate] = useState([]);
+
+  const fetchData = async () => {
+    let datesArray = [];
+    fetch("./data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setData(data.posts_by_date);
+        setDate(Object.keys(data.posts_by_date));
+      });
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex h-full">
+      <SideBar />
+      <Content postData={data} postDate={date} />
     </div>
   );
 }

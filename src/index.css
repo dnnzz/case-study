@@ -1,13 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Raleway";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7f8;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.dot {
+  height: 11.5px;
+  width: 11.5px;
+  background-color: #3ac183;
+  border-radius: 50%;
+}
+
+.h-446px {
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  height: 446px;
+}
+.w-369px {
+  width: 369px;
+}
+.card-img {
+  height: 248px;
+  width: 284px;
+}
+.card-text {
+  color: #b8b8b8;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 14px;
+}
+.content-text {
+  color: #6c757d;
+}
+.description {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 14px;
+  color: #959595;
+}
+.description a {
+  color: #71bcf0;
+}
+.card-actions {
+  max-width: 250px;
+}
+.actions-text {
+  font-size: 12px;
+}
+.pro-menu-item.active {
+  color: #f55661 !important;
+}
+
+.pro-sidebar
+  .pro-menu
+  .pro-menu-item.pro-sub-menu
+  .pro-inner-list-item
+  .pro-inner-item:before {
+  background-color: #fff !important;
+  border: none !important;
 }
