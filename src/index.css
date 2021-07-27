@@ -69,3 +69,6 @@ code {
   background-color: #fff !important;
   border: none !important;
 }
+.pro-sidebar > .pro-sidebar-inner {
+  background-color: #393d42 !important;
+}
