@@ -53,7 +53,7 @@ function Sidebar(props) {
         <div className="bg-sidebar-bg-secondary h-full flex-grow">
           <div className="h-50">
             <ProSidebar width="auto">
-              <Menu iconShape="square">
+              <Menu>
                 <MenuItem
                   icon={<NotificationIcon />}
                   suffix={
@@ -68,6 +68,7 @@ function Sidebar(props) {
                         top: "12px",
                         right: "12px",
                         textAlign: "center",
+                        marginLeft: "12px",
                       }}
                     >
                       {29}

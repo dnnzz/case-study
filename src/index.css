@@ -60,7 +60,12 @@ code {
 .pro-menu-item.active {
   color: #f55661 !important;
 }
-
+.pro-menu-item.pro-sub-menu.open > .pro-inner-item {
+  background-color: #f55661;
+}
+.pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item > .pro-icon-wrapper {
+  background-color: transparent !important;
+}
 .pro-sidebar
   .pro-menu
   .pro-menu-item.pro-sub-menu

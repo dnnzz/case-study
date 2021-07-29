@@ -15,16 +15,16 @@ function Content(props) {
       <div className="main-content flex flex-col -mt-4">
         {props.postDate.map((date) => {
           return (
-            <>
+            <div key={date}>
               <h1 key={date} className="content-text text-xl">
                 {date}
               </h1>
               <div className="post-cards flex flex-wrap">
                 {props.postData[date].map((post) => (
-                  <Card post={post} />
+                  <Card key={post.updated_at} post={post} />
                 ))}
               </div>
-            </>
+            </div>
           );
         })}
       </div>
